@@ -1,0 +1,144 @@
+$primary-color: #FA6C1A;
+$second-color: #2F2E2C;
+$third-color: green;
+$gray: #999999;
+$disable: #cccccc;
+$text-color: #242424;
+
+//color List
+$white: #ffffff;
+$red: #fb2d2d;
+$orange: #ff9b25;
+$yellow: #ffDB21;
+$green: #3ee315;
+$mint: #15bee3;
+$blue: #061651;
+$purple: #5b1096;
+$lightgry: #979797;
+$darkgry: #7E7E7E; //view 테두리
+
+/**
+width, height, padding, margin set
+ */
+
+@for $index from 0 to 20 {
+  .mt-#{$index} {
+    margin-top: $index * 5px;
+  }
+  .mr-#{$index} {
+    margin-right: $index * 5px;
+  }
+  .mb-#{$index} {
+    margin-bottom: $index * 5px;
+  }
+  .ml-#{$index} {
+    margin-left: $index * 5px;
+  }
+  .pt-#{$index} {
+    padding-top: $index * 5px;
+  }
+  .pr-#{$index} {
+    padding-right: $index * 5px;
+  }
+  .pb-#{$index} {
+    padding-bottom: $index * 5px;
+  }
+  .pl-#{$index} {
+    padding-left: $index * 5px;
+  }
+  .fs-#{$index} {
+    font-size: $index * 8px;
+  }
+  .w-#{index} {
+    width: $index * 5px;
+  }
+  .h-#{index} {
+    height: $index * 5px;
+  }
+}
+
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin animation($animation...) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -ms-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
+//특정 영역 가운데 정렬
+@mixin center-width {
+  position: absolute;
+  left: 50%;
+  @include transform(translateX(-50%));
+}
+
+//특정 영역 세로 정렬
+@mixin center-height {
+  position: absolute;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+//특정 영역 가운데 정렬
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
+//프로필 이미지 둥글게
+@mixin profile {
+  border-radius: 70%;
+  width: 50.7px;
+  height: 50px;
+  box-shadow: none;
+  object-fit: cover;
+}
+
+/**
+화면 반응형 기준
+360 ~ 767 : mobile;
+767 ~ 1200 : tablet;
+1200 ~      : pc;
+ */
+@mixin mb {
+  @media (max-width: 769px) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: 1199px) {
+    @content;
+  }
+}
+
+.mb-hide {
+  display: block;
+  @include mb() {
+    display: none;
+  }
+}

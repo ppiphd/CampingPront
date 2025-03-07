@@ -1,0 +1,51 @@
+@startuml
+
+(*) --> click write button
+--> "write a detail" as write
+if button
+--> [save] "save" as save
+else
+--> [close] "exit" as exit
+
+write --> if option
+--> "수정" as 수정
+else
+--> "삭제" as 삭제
+else
+--> "신고" as 신고
+
+수정 -down-> "send to server"
+삭제 -down-> "send to server"
+신고 -down-> "send to server"
+
+write --> if detail
+--> "공유"
+-down-> "send to server"
+else
+--> "북마크"
+-down-> "send to server"
+
+write --> if inside
+--> "댓글" as comment
+--> "대댓글"
+-down-> "send to server"
+else
+--> "좋아요"
+-down-> "send to server"
+else
+--> "북마크"
+-down-> "send to server"
+
+comment --> if option
+--> "수정"
+else
+--> "삭제"
+else
+--> "신고"
+
+save --> send to server
+ --> (*)
+exit --> (*)
+
+
+@enduml

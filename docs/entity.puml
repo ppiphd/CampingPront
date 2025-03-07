@@ -1,0 +1,123 @@
+@startuml
+entity user_info{
+#user_idx
+}
+
+entity user_detail{
+~user_idx
+}
+
+entity like_manager{
+#like_idx
+~user_idx
+}
+
+entity follow_manager{
+#follow_idx
+~user_idx
+}
+
+entity review_manager{
+#review_idx
+~user_idx
+}
+
+entity log_info{
+#log_idx
+~user_idx
+}
+
+entity user_login_log{
+#login_log_idx
+~user_idx
+}
+
+entity report_manager{
+#report_idx
+~user_idx
+}
+
+entity board_info{
+#board_idx
+~user_idx
+}
+
+entity board_detail{
+~board_idx
+
+}
+
+entity board_map_tag{
+~board_idx
+~tag_idx
+}
+
+entity camp_tip_info{
+#camp_tip_idx
+~user_idx
+}
+
+entity camp_tip_info_map_tag{
+~camp_tip_idx
+~tag_idx
+}
+
+entity tag_manager{
+#tag_idx
+}
+
+
+
+entity product_manager{
+#product_idx
+}
+
+entity product_map_tag{
+~product_idx
+~tag_idx
+}
+
+entity chat_manager{
+#chat_idx
+~user_idx
+target_idx
+}
+
+entity chat_list_info{
+~chat_idx
+sender_idx
+}
+
+log_info <= user_info
+user_info => user_detail
+
+user_info ===> like_manager
+user_info ===> follow_manager
+user_info ===> review_manager
+
+user_info ==> user_login_log
+user_info ==> report_manager
+user_info ==> board_info
+board_info ==> board_detail
+
+
+user_info ==> camp_tip_info
+
+user_info ==> chat_manager
+chat_manager ==> chat_list_info
+user_info ==> product_manager
+
+product_manager == product_map_tag
+product_map_tag === tag_manager
+
+camp_tip_info == camp_tip_info_map_tag
+camp_tip_info_map_tag === tag_manager
+
+board_info == board_map_tag
+board_map_tag === tag_manager
+
+
+
+
+
+@enduml

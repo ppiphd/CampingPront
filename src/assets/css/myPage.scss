@@ -1,0 +1,547 @@
+// myPage
+.myPage {
+  margin: 0 auto;
+  max-width: 774px;
+  width: 100%;
+  height: 100%;
+
+  .myProfile {
+    margin-block: 10px;
+    position: relative;
+    width: 774px;
+    height: 266px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.13);
+
+    .backgroundPicture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+      margin: auto;
+    }
+
+    .profilePicture {
+      position: absolute;
+      top: 110px;
+      left: 65px;
+      object-fit: cover;
+      border-radius: 70%;
+      width: 125px;
+      height: 125px;
+    }
+
+    .profileIntroduce {
+      display: grid;
+      padding-top: 190px;
+      padding-left: 200px;
+
+      .userNickName {
+        font-weight: bold;
+        font-size: 26px;
+      }
+
+      .userDescription {
+        color: #4c4c4c;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .myContents {
+    .tabBar {
+      display: inline-block;
+      position: absolute;
+      border-radius: 10px;
+      margin: 5px 0;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.13);
+
+      .custom-button {
+        background-color: transparent;
+        border: hidden;
+        border-radius: 0;
+
+        a {
+          color: #000000;
+        }
+      }
+
+      :hover {
+        background-color: #2f2e2c;
+
+        a {
+          color: #ffffff;
+        }
+      }
+
+      :first-child {
+        border-radius: 10px 10px 0 0;
+      }
+
+      :last-child {
+        border-radius: 0 0 10px 10px;
+      }
+
+      .active {
+        background-color: #2f2e2c;
+
+        a {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .contents-area {
+      width: 634px;
+      margin-left: 145px;
+      min-height: 400px;
+      height: auto;
+      padding-top: 10px;
+
+      .contents-area-li {
+        .contents-box {
+          display: inline-flex;
+          margin: 5px 10px;
+
+          .contents-img-wrap {
+            position: relative;
+            width: 270px;
+            height: 270px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.13);
+            cursor: pointer;
+
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              margin: auto;
+              border-radius: 10px;
+            }
+          }
+
+          .empty-box {
+            margin: 10px;
+            width: 270px;
+            height: 270px;
+          }
+        }
+      }
+
+      .updateProfile {
+        width: 640px;
+        justify-content: center;
+        margin: 10px 0 30px 0;
+        padding: 0 40px;
+        flex-wrap: nowrap;
+
+        span {
+          min-width: 130px;
+          align-self: center;
+          text-align: center;
+          font-size: 16px;
+          font-weight: 500;
+          border-right: 1px solid #2f2e2c;
+        }
+
+        .input-area {
+          display: flex;
+          border-bottom: 1px solid;
+          width: auto;
+
+          .custom-input {
+            font-weight: 500;
+            color: $gray;
+          }
+
+          .fixed-info {
+            display: flex;
+            align-items: center;
+            color: $text-color;
+            margin: auto 20px;
+            font-weight: 500;
+            height: 50px;
+          }
+
+          .img-upload-area {
+            margin: 10px auto;
+
+            &-ul {
+              display: flex;
+              width: auto;
+
+              &-li {
+                flex-wrap: wrap;
+                display: block;
+                justify-content: center;
+                width: auto;
+                margin: auto 10px;
+
+                &-wrap {
+                  display: flex;
+                  position: relative;
+                  height: 150px;
+                  width: 150px;
+
+                  @include mb() {
+                    width: 120px;
+                    height: 120px;
+                  }
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+
+                .custom-input-file-button {
+                  margin-top: 10px;
+                }
+              }
+            }
+
+            .img-upload-button {
+              display: flex;
+              margin: 10px 12px 0;
+              justify-content: space-between;
+            }
+          }
+        }
+
+        .updatePassword {
+          display: flex;
+          border-bottom: 1px solid;
+          width: auto;
+
+          .custom-button {
+          }
+        }
+
+        .profilePictureBox {
+          display: flex;
+          margin-inline: auto;
+          width: auto;
+          height: 50px;
+
+          span {
+            border: none;
+          }
+        }
+
+        .custom-input {
+          border: transparent;
+          background-color: transparent;
+          width: 600px;
+          margin: 0;
+          outline: none;
+        }
+
+        .custom-button {
+          margin-inline: 5px;
+          border-radius: 6px;
+          width: 80px;
+          height: 30px;
+          font-size: 16px;
+          font-weight: normal;
+
+          a {
+            color: $text_color;
+            font-weight: 400;
+          }
+        }
+
+        .save {
+          display: flex;
+          margin: 30px auto 50px;
+          background-color: #fa6c1a;
+          border: none;
+
+          a {
+            font-weight: 400;
+            margin-bottom: 2px;
+            color: #ffffff;
+          }
+
+          img {
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .myReview {
+        position: relative;
+        width: 100%;
+        padding: 0 20px;
+
+        .reviewItem {
+          display: flex;
+          padding: 15px;
+          border: 1px solid #c1c1c1;
+          border-radius: 10px;
+          width: 100%;
+
+          .itemImg {
+            top: 0;
+            left: 0;
+            width: auto;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+          }
+
+          .itemBox {
+            width: 100%;
+            margin-left: 20px;
+
+            .itemTitle {
+              font-size: 16px;
+              font-weight: 500;
+            }
+
+            .itemOption {
+              margin-block: 3px 8px;
+              font-size: 12px;
+            }
+
+            .itemGrade {
+              display: inline-flex;
+
+              img {
+                margin: 0 2px;
+              }
+            }
+
+            .itemComments {
+              padding-top: 5px;
+              font-size: 14px;
+            }
+          }
+
+          .itemBuyDate {
+            font-size: 10px;
+            position: absolute;
+            top: 20px;
+            right: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mb() {
+  .myPage {
+    .myProfile {
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+
+      .backgroundPicture {
+        height: 70%;
+      }
+
+      .profilePicture {
+        width: 80px;
+        height: 80px;
+        top: 130px;
+        left: 22px;
+      }
+
+      .profileIntroduce {
+        padding: 170px 0 20px 110px;
+
+        .userNickName {
+          font-size: 22px;
+        }
+
+        .userDescription {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .myContents {
+      width: 100%;
+      margin: auto;
+
+      .tabBar {
+        display: flex;
+        position: unset;
+        justify-content: space-between;
+        width: 90%;
+        margin: 10px auto;
+
+        .custom-button {
+          min-width: unset;
+          width: 33%;
+        }
+
+        :first-child {
+          border-radius: 10px 0 0 10px;
+        }
+
+        :last-child {
+          border-radius: 0 10px 10px 0;
+        }
+
+        .active {
+          background-color: #2f2e2c;
+
+          a {
+            color: #ffffff;
+          }
+        }
+      }
+
+      .contents-area {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        min-height: 1000px;
+
+        .contents-area-li {
+          width: 100%;
+          display: inline-flex;
+          flex-wrap: wrap;
+          margin: 0 auto;
+
+          .contents-box {
+            margin: 5px auto;
+
+            .contents-img-wrap {
+              width: 155px;
+              height: 155px;
+            }
+          }
+
+          .empty-box {
+            margin: 5px auto;
+            width: 155px;
+            height: 155px;
+          }
+        }
+
+        .updateProfile {
+          width: calc(100% - 20px);
+          margin: auto;
+          padding: 0;
+
+          .input-area {
+            display: grid;
+            margin: 5px auto;
+
+            span {
+              margin: auto;
+              border: none;
+              font-size: 16px;
+              font-weight: bold;
+            }
+
+            .custom-input {
+              font-weight: normal;
+              font-size: 14px;
+            }
+
+            .fixed-info {
+              font-weight: normal;
+              font-size: 14px;
+            }
+          }
+
+          .save {
+            margin: 20px auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+//유저 피드
+.user-feed {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  @include mb() {
+    width: 90%;
+  }
+
+  .profile-area {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+
+    .background-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      @include mb() {
+        height: 200px;
+      }
+    }
+
+    .profile {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      @include transform(translateY(-50%));
+      background-color: white;
+      width: 100%;
+      height: 80px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      box-shadow: 0 6px 8px rgb(0 0 0 / 13%);
+      padding: 10px 100px 10px 200px;
+      @include tb() {
+        padding: 10px 50px 10px 150px;
+      }
+      @include mb() {
+        padding: 10px 30px 10px 110px;
+      }
+
+      .profile-img {
+        position: absolute;
+        @include transform(translateY(-50%));
+        left: 50px;
+        width: 110px;
+        height: 110px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 6px 8px rgb(0 0 0 / 13%);
+        @include tb() {
+          width: 80px;
+          height: 80px;
+        }
+        @include mb() {
+          left: 20px;
+        }
+      }
+
+      .follow-btn {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 15px;
+        max-width: 100px;
+        min-width: 80px;
+        width: 30%;
+        height: 30px;
+        background-color: $primary-color;
+
+        &:hover {
+        }
+      }
+    }
+  }
+}

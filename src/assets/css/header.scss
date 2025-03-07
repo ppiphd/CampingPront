@@ -1,0 +1,292 @@
+.header {
+  margin-bottom: 30px;
+  position: relative;
+
+  &-bar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 96px;
+    width: 70%;
+    margin: 0 auto;
+    white-space: nowrap;
+
+    .mainContainer {
+      display: none;
+    }
+
+    .containerPop {
+      display: none;
+    }
+
+    &-logo {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-color: #000000;
+      color: white;
+      height: 100%;
+      width: 100px;
+      border-radius: 0 0 17px 17px;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        padding: 5px 10px;
+      }
+
+      span {
+        margin-bottom: 7px;
+        font-size: 15px;
+      }
+    }
+
+    &-mbLogo {
+      display: none;
+    }
+
+    &-myPage {
+      display: none;
+    }
+
+    &-menu {
+      &-login {
+        ul {
+          display: flex;
+          justify-content: flex-end;
+
+          li {
+            list-style: none;
+            padding: 0 8px;
+
+            a {
+              font-size: 11px;
+              color: #2f2e2c;
+              cursor: pointer;
+              padding-left: 5px;
+              transition: 0.5s;
+
+              &:hover {
+                color: #fa6c1a;
+              }
+            }
+          }
+        }
+      }
+
+      &-info {
+        display: flex;
+        align-items: center;
+        padding: 10px 6px;
+
+        .container {
+          padding-right: 20px;
+          display: none;
+
+          &-trigger {
+            display: none;
+
+            &-label {
+              width: 16px;
+              //display: block;
+              position: relative;
+              cursor: pointer;
+            }
+          }
+        }
+
+        &-list {
+          a {
+            cursor: pointer;
+            padding: 7px 20px;
+            font-weight: 700;
+            border-radius: 3px;
+          }
+
+          a:hover {
+            background-color: #2f2e2c;
+            color: #ffffff;
+            transition: 0.2s;
+          }
+        }
+
+        &-search {
+          position: relative;
+          padding-left: 20px;
+
+          input {
+            border-radius: 4px;
+            height: 20px;
+            width: 165px;
+            border: 1px solid #c3c3c3;
+          }
+
+          i {
+            position: absolute;
+            right: 9px;
+            top: 4px;
+            color: black;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tb() {
+  .header {
+    &-bar {
+      width: 80%;
+    }
+  }
+}
+
+@include mb() {
+  .header {
+    margin-bottom: unset;
+
+
+    &-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      width: 100%;
+
+      .mainContainer {
+        display: block;
+
+        &-label {
+          i {
+            font-size: 25px;
+            cursor: pointer;
+            padding: 0 10px;
+          }
+        }
+      }
+
+      .containerPop {
+        display: block;
+        width: 80px;
+        height: 124px;
+        background-color: #3f3f3f;
+        color: white;
+        position: fixed;
+        top: 11px;
+        left: 40px;
+        transition: 0.3s;
+        z-index: 1;
+
+        ul {
+          font-size: 14px;
+          height: 100px;
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+
+          li {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            a {
+              height: 50px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #7b7b7b;
+              }
+            }
+          }
+        }
+      }
+
+      &-logo {
+        display: none;
+      }
+
+      &-mbLogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        width: 80px;
+        background-color: unset;
+        border-radius: unset;
+        justify-content: center;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &-myPage {
+        display: block;
+
+        i {
+          cursor: pointer;
+          font-size: 25px;
+          color: black;
+          padding: 0 10px;
+        }
+      }
+
+      &-menu {
+        display: none;
+
+        &-login {
+          ul {
+            display: flex;
+            justify-content: flex-end;
+
+            li {
+              list-style: none;
+              padding: 0 8px;
+
+              a {
+                font-size: 11px;
+                color: #2f2e2c;
+                cursor: pointer;
+              }
+
+              a:hover {
+                color: #fa6c1a;
+              }
+            }
+          }
+        }
+
+        &-info {
+          display: none;
+
+          .container {
+            padding-right: 20px;
+
+            &-trigger {
+              display: none;
+
+              &-label {
+                width: 16px;
+                display: block;
+                position: relative;
+                cursor: pointer;
+              }
+            }
+          }
+
+          &-list {
+            display: none;
+          }
+
+          &-search {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

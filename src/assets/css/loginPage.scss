@@ -1,0 +1,224 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 0 64px 0;
+
+  .login-area {
+    margin-bottom: 32px;
+    width: 100%;
+    height: 487px;
+    text-align: center;
+    background-size: 100% 100%;
+    background-image: url("../assets/images/login/login_bg.webp");
+
+    .logo-area {
+      padding-top: 56px;
+      margin-bottom: 44px;
+
+      img {
+        width: 100px;
+        height: 65px;
+        margin-bottom: 23px;
+      }
+
+      h1 {
+        font-size: 24px;
+        color: $text-color;
+        margin: 0;
+      }
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .custom-input {
+        width: 300px;
+      }
+
+      input {
+        border: 2px solid #2F2E2C;
+        border-radius: 15px;
+        padding: 0 20px;
+        max-width: 300px;
+        min-width: 100px;
+        height: 50px;
+        color: #999999;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        width: 300px;
+      }
+
+      .btn-area {
+        display: flex;
+        margin-top: 20px;
+
+        .join {
+          background-color: $primary-color;
+          border: 2px solid $primary-color;
+          margin-left: 20px;
+
+          a {
+            color: white;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    > p {
+      margin-top: 16px;
+      font-size: 12px;
+      color: $gray;
+      background-repeat: round;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .join-btn {
+    color: $gray;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+//회원가입
+
+.signup {
+  padding: 100px 0 100px 0;
+  text-align: center;
+
+  .signup-img-fir {
+    position: relative;
+    top: 230px;
+    right: 27%;
+    @include tb() {
+      img {
+        display: none;
+      }
+    }
+
+    img {
+      position: absolute;
+      width: 543px;
+    }
+  }
+
+  .signup-img-sec {
+    position: relative;
+    right: 27%;
+    @include tb() {
+      img {
+        display: none;
+      }
+    }
+
+    img {
+      position: absolute;
+      width: 346px;
+    }
+  }
+
+  .signup-form {
+    display: inline-block;
+    position: relative;
+    background: rgba(238, 238, 238, 0.8);
+    width: 400px;
+    height: 513px;
+    text-align: -webkit-center;
+    left: 15%;
+    @include tb() {
+      left: 0px;
+      width: 100%;
+    }
+
+    .custom-button {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      position: relative;
+      top: 148px;
+      max-width: 515px;
+      width: 275px;
+
+      a {
+        color: white;
+      }
+    }
+
+    span {
+      font-size: 30px;
+      color: $primary-color;
+      top: 55px;
+      position: relative;
+    }
+
+    input {
+      border: 2px solid #2F2E2C;
+      border-radius: 15px;
+      padding: 0 20px;
+      max-width: 300px;
+      min-width: 100px;
+      height: 50px;
+      color: #999999;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: block;
+      text-align: center;
+      top: 102px;
+      position: relative;
+    }
+
+    .custom-input {
+      display: block;
+      text-align: center;
+      top: 102px;
+      position: relative;
+    }
+  }
+
+  .signup-form-sec {
+    display: inline-block;
+    position: relative;
+    background: rgba(238, 238, 238, 0.8);
+    width: 400px;
+    height: 513px;
+    text-align: -webkit-center;
+    left: 15%;
+
+    .custom-button {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      position: relative;
+      top: 148px;
+      max-width: 515px;
+      width: 275px;
+
+      a {
+        color: white;
+      }
+    }
+
+    span {
+      font-size: 30px;
+      color: $primary-color;
+      top: 55px;
+      position: relative;
+    }
+
+    .custom-input {
+      display: block;
+      text-align: center;
+      top: 102px;
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+$calendar-border-color: #222222;
+#calendar {
+  position: absolute;
+  padding-top: 20px;
+  width: 177px;
+  height: 195px;
+  background-color: $white;
+  z-index: 1;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+
+  .header {
+    display: flex;
+    width: 175px;
+    justify-content: space-around;
+
+    i {
+      cursor: pointer;
+    }
+  }
+
+  .body {
+    border: 1px solid $calendar-border-color;
+    //border-top: 1px solid $calendar-border-color;
+    //border-left: 1px solid $calendar-border-color;
+    width: 175px;
+
+    .week {
+      display: flex;
+
+      .days {
+        font-size: 16px;
+        display: flex;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+
+        &.sater-day {
+          color: blue;
+        }
+
+        &.sun-day {
+          color: red
+        }
+
+        &.today {
+          background-color: #cccccc;
+        }
+
+        &.cursor {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+}
+
+.calendar-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 150px;
+  height: 30px;
+  border: 1px solid $calendar-border-color;
+  border-radius: 10px;
+}

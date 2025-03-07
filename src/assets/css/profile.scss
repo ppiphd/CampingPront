@@ -1,0 +1,154 @@
+@include pc() {
+  .profile {
+
+    &-wrap {
+      display: flex;
+      padding: 5px;
+      align-items: center;
+
+
+      img {
+        cursor: pointer;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+        object-fit: cover;
+      }
+
+      &-data {
+        padding: 0 0 0 13px;
+        width: 190px;
+
+        span {
+          cursor: context-menu;
+          margin-right: 5px;
+          font-size: 14px;
+        }
+
+        .middle-dot {
+          position: relative;
+        }
+
+        .follow {
+          position: relative;
+          bottom: 2px;
+          font-size: 10px;
+          background: none;
+          padding: 0 8px;
+          border: 2px solid #FA6C1A;
+          border-radius: 19px;
+          cursor: pointer;
+          font-weight: 700;
+        }
+
+        &-place {
+          color: #636363;
+          background-color: rgba(204, 204, 204, 0.3);
+          font-size: 10px;
+          padding: 3.25px;
+          border-radius: 4px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          i {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tb() {
+  .profile {
+
+    &-wrap {
+      display: flex;
+      padding: 5px;
+      align-items: center;
+
+      @include mb() {
+        padding: 3px 1px;
+      }
+
+      img {
+        cursor: pointer;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+        object-fit: cover;
+        @include mb() {
+          border-radius: 70%;
+          width: 41px;
+          height: 41px;
+        }
+      }
+
+      &-data {
+        padding: 0 0 0 13px;
+        width: 190px;
+        @include mb() {
+          padding: 0 6px 0 10px;
+          width: 90%;
+        }
+
+        span {
+          margin-right: 5px;
+          font-size: 14px;
+          @include mb() {
+            margin-right: 5px;
+            font-size: 12px;
+          }
+        }
+
+        .middle-dot {
+          position: relative;
+        }
+
+        .follow {
+          position: relative;
+          bottom: 2px;
+          font-size: 10px;
+          background: none;
+          padding: 0 8px;
+          border: 2px solid #FA6C1A;
+          border-radius: 19px;
+          cursor: pointer;
+          font-weight: 700;
+          @include mb() {
+            font-weight: 500;
+            border: 1px solid #FA6C1A;
+            padding: 0 2px;
+            font-size: 8px;
+          }
+        }
+
+        &-place {
+          i {
+            font-size: 11px;
+          }
+
+          margin: 0;
+          color: #636363;
+          background-color: rgba(204, 204, 204, 0.3);
+          font-size: 10px;
+          padding: 0 3.25px;
+          border-radius: 4px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          @include mb() {
+            position: relative;
+            font-size: 0.5rem;
+            padding: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

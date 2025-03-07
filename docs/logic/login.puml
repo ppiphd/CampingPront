@@ -1,0 +1,29 @@
+@startuml
+
+(*) --> Login
+if has id?
+-down-> [true] "Do login" as doLogin
+else
+--right->[false] "Do join" as doJoin
+
+doJoin -down-> if "join type"
+    -left-> "general" as joinGeneral
+    else
+    -down-> "SNS" as joinSns
+
+joinGeneral -left-> doLogin
+joinSns -->[check auth] joinSns
+joinSns -down-> ===b===
+
+doLogin --> if "login Type"
+    -down-> "SNS" as sns
+    else
+    -down-> "general" as general
+
+
+sns -down> ===b===
+general -down> ===b===
+
+===b=== -down-> (*)
+
+@enduml

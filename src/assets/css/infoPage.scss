@@ -1,0 +1,1206 @@
+// 메인 마켓
+.market-box {
+  text-align: center;
+
+  .main-market-fir {
+    display: inline-block;
+    width: 220px;
+    height: 300px;
+    margin-left: 21px;
+    text-align: center;
+    margin-right: 21px;
+    border-bottom: none;
+
+    .market-img {
+      svg {
+        margin: 10px;
+        float: left;
+      }
+
+      border: 1px solid rgba(204, 204, 204, 0.5);
+      width: 100%;
+      height: 190px;
+      background-size: 100% 100%;
+      background-image: url("/assets/image/market1.webp");
+      border-radius: 0 0 5px 5px;
+    }
+
+    .market-content {
+      border: 1px solid rgba(204, 204, 204, 0.5);
+      display: inline-block;
+      border-top: none;
+      border-radius: 5px;
+
+      h1 {
+        font-size: 15px;
+        float: left;
+        margin-top: 6px;
+        margin-bottom: 6px;
+      }
+
+      a {
+        font-size: 14px;
+        float: left;
+        margin-top: 4px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        display: inline-block;
+        float: left;
+        padding-bottom: 11px;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+        color: #ea3323;
+        font-size: 20px;
+        inline-size: -webkit-fill-available;
+        text-align: left;
+        margin: 13px;
+        margin-bottom: 0px;
+      }
+
+      span {
+        display: inline-block;
+        text-align: left;
+        color: #818181;
+        font-size: 13px;
+        float: left;
+      }
+
+      .market-day {
+        border: none;
+        color: #818181;
+        font-size: 11px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .market-like {
+        border: none;
+        color: #818181;
+        font-size: 11px;
+        padding: 0;
+        margin: 13px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+
+        span {
+          float: right;
+          padding: 0;
+          margin: 3px;
+        }
+
+        a {
+          margin: 3px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .main-market-sec {
+    display: inline-block;
+    width: 220px;
+    height: 300px;
+    margin: 20px;
+    text-align: center;
+
+    .market-img {
+      svg {
+        margin: 10px;
+        float: left;
+      }
+
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border: 1px solid rgba(204, 204, 204, 0.5);
+      width: 100%;
+      height: 190px;
+      background-size: 100% 100%;
+      background-image: url("/assets/image/market2.webp");
+      border-radius: 5px;
+    }
+
+    .market-content {
+      border: 1px solid rgba(204, 204, 204, 0.5);
+      display: inline-block;
+      border-top: none;
+      border-radius: 5px;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+
+      h1 {
+        font-size: 15px;
+        float: left;
+        margin-top: 6px;
+        margin-bottom: 6px;
+      }
+
+      a {
+        font-size: 14px;
+        float: left;
+        margin-top: 4px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        display: inline-block;
+        float: left;
+        padding-bottom: 11px;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+        display: inline-block;
+        color: #ea3323;
+        float: left;
+        font-size: 20px;
+        inline-size: -webkit-fill-available;
+        text-align: left;
+        margin: 13px;
+        margin-bottom: 0px;
+      }
+
+      span {
+        display: inline-block;
+        text-align: left;
+        color: #818181;
+        font-size: 13px;
+        float: left;
+      }
+
+      .market-day {
+        border: none;
+        color: #818181;
+        font-size: 11px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .market-like {
+        border: none;
+        color: #818181;
+        font-size: 11px;
+        padding: 0;
+        margin: 13px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+
+        span {
+          float: right;
+          padding: 0;
+          margin: 3px;
+        }
+
+        a {
+          margin: 3px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .main-market-thi {
+    display: inline-block;
+    width: 220px;
+    height: 300px;
+    margin-left: 21px;
+    text-align: center;
+    margin-right: 21px;
+    border-bottom: none;
+
+    .market-img {
+      svg {
+        margin: 10px;
+        float: left;
+      }
+
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border: 1px solid rgba(204, 204, 204, 0.5);
+      width: 100%;
+      height: 190px;
+      background-size: 100% 100%;
+      background-image: url("/assets/image/market3.webp");
+      border-radius: 5px;
+    }
+
+    .market-content {
+      border: 1px solid rgba(204, 204, 204, 0.5);
+      display: inline-block;
+      border-top: none;
+      border-radius: 5px;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+
+      h1 {
+        font-size: 15px;
+        float: left;
+        margin-top: 6px;
+        margin-bottom: 6px;
+      }
+
+      a {
+        font-size: 14px;
+        float: left;
+        margin-top: 4px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        display: inline-block;
+        float: left;
+        padding-bottom: 11px;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+        display: inline-block;
+        color: #ea3323;
+        float: left;
+        font-size: 20px;
+        inline-size: -webkit-fill-available;
+        text-align: left;
+        margin: 13px;
+        margin-bottom: 0px;
+      }
+
+      span {
+        display: inline-block;
+        text-align: left;
+        color: #818181;
+        font-size: 13px;
+        float: left;
+      }
+
+      .market-day {
+        border: none;
+        color: #818181;
+        font-size: 11px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .market-like {
+        border: none;
+        color: #818181;
+        font-size: 11px;
+        padding: 0;
+        margin: 13px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+
+        span {
+          float: right;
+          padding: 0;
+          margin: 3px;
+        }
+
+        a {
+          margin: 3px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .main-market-for {
+    opacity: 0.5;
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 300px;
+    margin-left: 21px;
+    text-align: center;
+    margin-right: 21px;
+    border-bottom: none;
+
+    .market-img {
+      span {
+        opacity: 100%;
+        position: relative;
+        font-size: 30px;
+        left: -35px;
+        top: 149px;
+      }
+
+      svg {
+        margin: 10px;
+        float: left;
+      }
+
+      border: 1px solid rgba(204, 204, 204, 0.5);
+      width: 100%;
+      height: 190px;
+      background-size: 100% 100%;
+      background-image: url("/assets/image/market4.webp");
+      border-radius: 5px;
+    }
+
+    .market-content {
+      border: 1px solid rgba(204, 204, 204, 0.5);
+      display: inline-block;
+      border-top: none;
+      border-radius: 5px;
+
+      h1 {
+        font-size: 15px;
+        float: left;
+        margin-top: 6px;
+        margin-bottom: 6px;
+      }
+
+      a {
+        font-size: 14px;
+        float: left;
+        margin-top: 4px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        display: inline-block;
+        float: left;
+        padding-bottom: 11px;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+        color: #ea3323;
+        font-size: 20px;
+
+        text-align: left;
+        margin: 13px;
+        margin-bottom: 0px;
+      }
+
+      span {
+        display: inline-block;
+        text-align: left;
+        color: #818181;
+        font-size: 13px;
+        float: left;
+      }
+
+      .market-day {
+        border: none;
+        color: #818181;
+        font-size: 11px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .market-like {
+        border: none;
+        color: #818181;
+        font-size: 11px;
+        padding: 0;
+        margin: 13px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+
+        span {
+          float: right;
+          padding: 0;
+          margin: 3px;
+        }
+
+        a {
+          margin: 3px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+// ㅡㅡㅡㅡㅡ캠핑장정보
+
+.info-main {
+  display: none;
+  //height: 258px;
+  //text-align: -webkit-center;
+  //@include mb() {
+  //  top: -64px;
+  //  height: 692px;
+  //  text-align: unset;
+  //}
+  //
+  //
+  //.side {
+  //}
+  //
+  //.info-sidebar {
+  //  position: absolute;
+  //  top: 19%;
+  //
+  //  a {
+  //    position: relative;
+  //    float: left;
+  //  }
+  //}
+  //
+  //.info-box {
+  //  display: flex;
+  //  justify-content: center;
+  //
+  //  .info-shapbox {
+  //    .info-shap {
+  //      text-align: center;
+  //      position: relative;
+  //      padding: 0 17px 0 17px;
+  //      color: #666666;
+  //      text-decoration: none;
+  //      cursor: pointer;
+  //      @include mb() {
+  //        padding: 0 5px 0 5px;
+  //      }
+  //    }
+  //  }
+  //}
+
+  .map-box {
+    position: relative;
+    text-align: -webkit-center;
+    width: 100%;
+    top: 55px;
+    //padding-top: 60px;
+    svg {
+      display: none;
+    }
+
+    .map_wrap,
+    .map_wrap * {
+      margin: 0;
+      padding: 0;
+      font-family: "Malgun Gothic", dotum, "돋움", sans-serif;
+      font-size: 12px;
+    }
+
+    .map_wrap a,
+    .map_wrap a:hover,
+    .map_wrap a:active {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .map_wrap {
+      #map {
+        @include mb() {
+          display: none;
+        }
+      }
+
+      position: relative;
+      width: 70%;
+      height: 466px;
+
+      .option {
+        input {
+          border: 2px solid #2f2e2c;
+          border-radius: 15px;
+          padding: 0 20px;
+          min-width: 100px;
+          height: 50px;
+          color: #999999;
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          width: 70%;
+          text-align: center;
+          box-shadow: 4px 4px 6px rgb(0 0 0 / 30%);
+        }
+
+        button {
+          top: 4.5%;
+          left: 74%;
+          position: absolute;
+          background-color: unset;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    #menu_wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 400px;
+      margin: 10px 0 30px 10px;
+      padding: 5px;
+      overflow-y: auto;
+      background: rgba(255, 255, 255, 0.7);
+      z-index: 1;
+      font-size: 12px;
+      border-radius: 10px;
+      @include mb() {
+        width: 100%;
+      }
+    }
+
+    .bg_white {
+      background: #fff;
+    }
+
+    #menu_wrap hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 2px solid #5f5f5f;
+      margin: 3px 0;
+    }
+
+    #menu_wrap .option {
+      text-align: center;
+    }
+
+    #menu_wrap .option p {
+      margin: 10px 0;
+    }
+
+    #menu_wrap .option button {
+      @include mb {
+        margin-left: -11px;
+      }
+      margin-left: 5px;
+    }
+
+    #placesList li {
+      list-style: none;
+    }
+
+    #placesList .item {
+      position: relative;
+      border-bottom: 1px solid #888;
+      overflow: hidden;
+      cursor: pointer;
+      min-height: 65px;
+    }
+
+    #placesList .item span {
+      display: block;
+      margin-top: 4px;
+    }
+
+    #placesList .item h5,
+    #placesList .item .info {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    #placesList .item .info {
+      padding: 10px 0 10px 0;
+      @include mb() {
+        padding: 10px;
+      }
+    }
+
+    #placesList .info .gray {
+      color: #8a8a8a;
+    }
+
+    #placesList .info .jibun {
+      padding-left: 26px;
+      background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.webp) no-repeat;
+    }
+
+    #placesList .info .tel {
+      color: #009900;
+    }
+
+    #placesList .item .markerbg {
+      float: left;
+      position: absolute;
+      width: 36px;
+      height: 37px;
+      margin: 10px 0 0 10px;
+      background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.webp) no-repeat;
+    }
+
+    #placesList .item .marker_1 {
+      background-position: 0 -10px;
+    }
+
+    #placesList .item .marker_2 {
+      background-position: 0 -56px;
+    }
+
+    #placesList .item .marker_3 {
+      background-position: 0 -102px;
+    }
+
+    #placesList .item .marker_4 {
+      background-position: 0 -148px;
+    }
+
+    #placesList .item .marker_5 {
+      background-position: 0 -194px;
+    }
+
+    #placesList .item .marker_6 {
+      background-position: 0 -240px;
+    }
+
+    #placesList .item .marker_7 {
+      background-position: 0 -286px;
+    }
+
+    #placesList .item .marker_8 {
+      background-position: 0 -332px;
+    }
+
+    #placesList .item .marker_9 {
+      background-position: 0 -378px;
+    }
+
+    #placesList .item .marker_10 {
+      background-position: 0 -423px;
+    }
+
+    #placesList .item .marker_11 {
+      background-position: 0 -470px;
+    }
+
+    #placesList .item .marker_12 {
+      background-position: 0 -516px;
+    }
+
+    #placesList .item .marker_13 {
+      background-position: 0 -562px;
+    }
+
+    #placesList .item .marker_14 {
+      background-position: 0 -608px;
+    }
+
+    #placesList .item .marker_15 {
+      background-position: 0 -654px;
+    }
+
+    #pagination {
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    #pagination a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    #pagination .on {
+      font-weight: bold;
+      cursor: default;
+      color: #777;
+    }
+  }
+
+  background-image: url("/assets/image/main-bottom.webp ");
+  background-size: 100% 100%;
+
+  position: relative;
+  top: -126px;
+
+  .header {
+    padding-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 4%;
+  }
+
+  .info-serch {
+    margin: 2%;
+    text-align: center;
+
+    span {
+      position: relative;
+      left: -40px;
+      top: 3px;
+    }
+
+    .custom-input::placeholder {
+      text-align: center;
+    }
+
+    .custom-input {
+      width: 70%;
+      max-width: 500px;
+      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .date-box {
+    text-align: center;
+
+    .date-pic {
+      position: relative;
+      display: inline-block;
+      margin: 30px;
+      padding-right: 9%;
+      @include tb() {
+        position: relative;
+        display: inline-block;
+        margin: 0;
+        padding-right: 0;
+      }
+
+      .calendar-btn {
+        @include mb() {
+          width: 150px;
+        }
+        width: 300px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        background-color: white;
+        border: 2px solid $primary-color;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+        z-index: 2;
+      }
+
+      #calendar {
+        z-index: 2;
+      }
+    }
+
+    .date-pick {
+      position: relative;
+      display: inline-block;
+      margin: 30px;
+      padding-left: 9%;
+
+      .calendar-btn {
+        width: 300px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        background-color: white;
+        border: 2px solid $primary-color;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+        @include mb() {
+          width: 150px;
+        }
+      }
+
+      #calendar {
+        z-index: 2;
+      }
+    }
+  }
+
+  .info-side {
+    position: fixed;
+    width: 8%;
+    background-color: white;
+    height: 32%;
+    top: 20%;
+    border-radius: 0 10px 10px 0;
+    z-index: 1;
+
+    span {
+      position: absolute;
+      font-size: 30px;
+      margin: 0 auto;
+    }
+
+    .info-navi {
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 68px;
+      top: 44px;
+    }
+
+    .info {
+      text-align: center;
+      padding: 15px 0 15px 0;
+      position: relative;
+      top: 10%;
+      left: -2%;
+
+      a {
+        font-size: 20px;
+        position: relative;
+        display: inline-block;
+        color: #2f2e2c;
+        text-decoration: none;
+      }
+    }
+
+    .info-dic:hover {
+      width: 170px;
+      position: relative;
+      color: white;
+      border-radius: 0 5px 5px 0;
+      background-color: #2f2e2c;
+      text-align: center;
+      animation-duration: 0.5s;
+      animation-name: slide;
+      @keyframes slide {
+        from {
+          margin-left: -30px;
+        }
+        to {
+          margin-left: 0;
+        }
+      }
+
+      a {
+        color: white;
+      }
+    }
+
+    .info-dic {
+      text-align: center;
+      padding: 15px 0 15px 0;
+      position: relative;
+      top: 15%;
+      left: -2%;
+
+      a {
+        position: relative;
+        display: inline-block;
+        color: #cccccc;
+        text-decoration: none;
+      }
+    }
+
+    .info-food:hover {
+      width: 170px;
+      position: relative;
+      color: white;
+      border-radius: 0 5px 5px 0;
+      background-color: #2f2e2c;
+      text-align: center;
+      animation-duration: 0.5s;
+      animation-name: slide;
+      @keyframes slide {
+        from {
+          margin-left: -30px;
+        }
+        to {
+          margin-left: 0;
+        }
+      }
+
+      a {
+        color: white;
+      }
+    }
+
+    .info-food {
+      text-align: center;
+      padding: 15px 0 15px 0;
+      position: relative;
+      top: 15%;
+      left: -2%;
+
+      a {
+        position: relative;
+        display: inline-block;
+        color: #cccccc;
+        text-decoration: none;
+      }
+    }
+
+    //.info-food {
+    //  text-align: center;
+    //
+    //  a:hover {
+    //    color: #2F2E2C;
+    //  }
+    //
+    //  a {
+    //    position: relative;
+    //    display: inline-block;
+    //    color: #cccccc;
+    //    text-decoration: none;
+    //  }
+    //}
+  }
+
+  .info-mapbtn {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 0.7%;
+    width: 300px;
+    @include tb() {
+      display: none;
+    }
+
+    .custom-button {
+      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.info-select {
+  position: relative;
+  top: -98px;
+  text-align: center;
+
+  select {
+    position: relative;
+    margin-right: 1.2%;
+    border-radius: 5px;
+    font-size: 17px;
+    right: 23%;
+    background-color: wheat;
+  }
+}
+
+.info-camp {
+  position: relative;
+  color: #cccccc;
+  //border-top: solid 2px;
+  min-height: 800px;
+  background-size: 100% 100%;
+
+  .camp-info {
+    h1 {
+      color: #818181;
+      padding: 7%;
+    }
+
+    .te {
+      cursor: pointer;
+      color: #fa6c1a;
+      font-size: 40px;
+      padding-top: 30px;
+      @include mb() {
+        font-size: 35px;
+      }
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+
+      span {
+        i {
+          top: 100px;
+          font-size: 25px;
+          color: #fa6c1a;
+          position: absolute;
+          @include mb() {
+            font-size: 20px;
+          }
+        }
+      }
+
+      input:focus {
+
+        outline: none;
+      }
+
+      input {
+        height: 37px;
+        border: none;
+        width: 381px;
+        border-bottom: 3px solid #fa6c1a;
+        text-align: center;
+        background: none;
+        @include mb() {
+          width: 248px;
+        }
+      }
+    }
+
+    .selec {
+      padding-bottom: 2%;
+      color: #3F4254;
+    }
+
+    .ser {
+      margin: 30px;
+    }
+
+    .main-icon {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-bottom: 56px;
+
+      @include mb() {
+        padding-bottom: 36px;
+        padding-top: unset;
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000000;
+        position: relative;
+        padding: 20px;
+
+        img:hover {
+        }
+
+        img:active {
+          position: relative;
+          top: 4px;
+        }
+
+        img {
+          cursor: pointer;
+          @include mb() {
+            width: 100%;
+          }
+        }
+
+        @include mb() {
+          padding: 3%;
+          width: 63px;
+        }
+      }
+
+      span {
+        display: flex;
+        inline-size: -webkit-fill-available;
+        justify-content: center;
+        @include mb() {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .info-body {
+      text-align: center;
+
+      .info-item {
+        @include mb() {
+          margin: 0 8% 10% 0;
+        }
+        margin: 0 8% 4% 8%;
+        position: relative;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 25%);
+        border-radius: 8px;
+        width: 33%;
+        display: inline-block;
+        text-align: center;
+
+        a:hover {
+          img:hover {
+            //opacity: 0.5;
+          }
+        }
+
+        .item-front {
+          background-color: $primary-color;
+
+          img {
+            opacity: 1;
+            z-index: 0;
+            max-width: 600px;
+            border-radius: 8px 8px 0 0;
+            max-height: 233px;
+            width: 100%;
+          }
+        }
+
+        .camp-list {
+          .name {
+            color: #2f2e2c;
+            font-size: 25px;
+            padding: 2%;
+            text-align: center;
+          }
+
+          .des {
+            padding: 1%;
+            font-size: 17px;
+            text-align: center;
+            color: #fa6c1a;
+
+            span {
+              font-size: 15px;
+              padding: 3%;
+            }
+          }
+
+          .info-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            .info-add {
+              position: relative;
+              padding: 2%;
+
+              span {
+                color: #3f4254;
+              }
+            }
+
+            .info-ad {
+              position: relative;
+              padding: 2%;
+
+              span {
+                color: #3f4254;
+              }
+            }
+
+            .info-ph {
+              position: relative;
+              padding: 2%;
+              text-align: center;
+
+              span {
+                color: #3f4254;
+              }
+            }
+
+            .info-btn {
+
+              button {
+                float: right;
+                background-color: white;
+                border: 3px solid #fa6c1a;
+                border-radius: 21px;
+                color: #fa6c1a;
+                font-size: 12px;
+                padding: 3px 6px;
+                margin: 10px;
+              }
+
+              button:active {
+                position: relative;
+                top: 2px
+              }
+
+              button:hover {
+                cursor: pointer;
+                color: white;
+                background-color: #fa6c1a;
+              }
+            }
+          }
+        }
+
+        .camp-type {
+          span {
+            font-size: 13px;
+            position: absolute;
+            width: 50px;
+            left: -16px;
+            top: -25px;
+          }
+
+          border-radius: 8px;
+        }
+
+        @include mb() {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.info-pagination {
+  position: relative;
+  text-align: center;
+}
