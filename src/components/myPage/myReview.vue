@@ -5,12 +5,12 @@ export default {
   name: "myReview",
   setup() {
     const itemData = ref({
-      itemImg: "/assets/image/chun.webp"
+      itemImg: "/assets/image/chun.webp",
     });
     return {
-      itemData
+      itemData,
     };
-  }
+  },
 };
 </script>
 

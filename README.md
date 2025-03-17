@@ -1,4 +1,4 @@
-# 개발페이지
+# 🛠️ 개발페이지 🛠️
 
 1. 로그인/회원가입
 2. 캠핑장정보
@@ -7,15 +7,13 @@
 5. 이용약관,가이드
 6. 메인페이지
 
-
-#  캠핑플랫폼
+# 🏕️ 캠핑플랫폼 🏕️
 
 1. 캠핑장정보
 
 2. 캠핑용품 중고거래
 
 3. SNS
-
 
 # camping-front
 
@@ -30,10 +28,10 @@ yarn dev
 
 ```
 빌드
-yarn build 
+yarn build
 ```
 
 ## 변수명 생성규칙
 
 변수명 : camel case \
-css :  kebab case
+css : kebab case
