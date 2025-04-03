@@ -30,13 +30,8 @@ export default {
 
     const insertCampingViewLog = async campingIdx => {
       if (campingIdx) {
-        try {
-          const d = await apiClient("/camping/insertSearchLog", { campingIdx: campingIdx });
-          console.log("캠핑장 조회 로그 저장 성공:", campingIdx);
-        } catch (error) {
-          // 로그 저장 실패는 UX에 영향을 주지 않도록 조용히 처리
-          console.warn("캠핑장 조회 로그 저장 실패 (무시됨):", error.message);
-        }
+        const d = await apiClient("/camping/insertSearchLog", { campingIdx: campingIdx });
+        // console.log(d);
       }
     };
 
@@ -77,15 +72,16 @@ export default {
           console.error("캠핑장 정보가 없습니다:", JSON.stringify(response));
           alert(`폐업한 캠핑장입니다 ㅠㅠ`);
           // 페이지 전환 시 부드러운 전환을 위해 nextTick 사용
-          nextTick(() => {
-            setTimeout(() => {
-              router.push({
-                path: "/infoPage",
-                // 페이지 전환 시 스크롤 위치 등 상태 유지
-                replace: true,
-              });
-            }, 100);
-          });
+          router.push("/infoPage");
+          // nextTick(() => {
+          //   setTimeout(() => {
+          //     router.push({
+          //       path: "/infoPage",
+          //       // 페이지 전환 시 스크롤 위치 등 상태 유지
+          //       replace: true,
+          //     });
+          //   }, 10);
+          // });
         }
       } catch (error) {
         console.error("캠핑장 상세 정보 로딩 실패:", error);
@@ -93,18 +89,13 @@ export default {
           console.error("오류 응답:", error.response.status, error.response.data);
         }
         alert("캠핑장 상세 정보를 불러오는데 실패했습니다. 다시 시도해주세요.");
-        nextTick(() => {
-          setTimeout(() => {
-            router.push({
-              path: "/infoPage",
-              replace: true,
-            });
-          }, 100);
-        });
+        router.push("/infoPage");
       }
     };
 
     onMounted(() => {
+      // 페이지 로드 시 스크롤 최상단으로 이동
+      window.scrollTo(0, 0);
       getCampingData();
     });
 

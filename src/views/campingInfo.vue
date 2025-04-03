@@ -93,8 +93,9 @@ export default {
 
     const showDetail = data => {
       const path = "/campingDetail/" + data.campingIdx;
+      // 스크롤을 상단으로 올린 후 페이지 이동
+      window.scrollTo(0, 0);
       router.push(path);
-      // store.commit(STORE_TYPE.popupType, POPUP_TYPE.DETAIL_CAMPING);
     };
 
     const comparisonAction = item => {
@@ -319,5 +320,42 @@ export default {
 .main-icon a.active {
   color: #4caf50;
   font-weight: bold;
+}
+
+/* 텍스트 생략 처리를 위한 CSS */
+.info-inner .info-add span,
+.info-inner .info-ad span,
+.info-inner .info-ph span,
+.des span {
+  display: inline-block;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 모바일 화면에서의 텍스트 생략 처리 */
+@media (max-width: 768px) {
+  .info-inner .info-add span,
+  .info-inner .info-ad span,
+  .info-inner .info-ph span,
+  .des span {
+    max-width: 200px;
+  }
+}
+
+/* 호버 시 전체 텍스트 표시 */
+.info-inner .info-add span:hover,
+.info-inner .info-ad span:hover,
+.info-inner .info-ph span:hover,
+.des span:hover {
+  white-space: normal;
+  overflow: visible;
+  position: relative;
+  z-index: 10;
+  background-color: #f9f9f9;
+  padding: 3px 5px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 </style>
