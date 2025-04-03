@@ -8,6 +8,7 @@ import { apiClient } from "../utils/axios.js";
 import kakaoMap from "../components/kakaoMap.vue";
 import { useRoute, useRouter } from "vue-router";
 import goTo from "vuetify/lib/services/goto";
+import KakaoMap from "../components/kakaoMap.vue";
 
 export default {
   name: "campingDetail",
@@ -29,8 +30,13 @@ export default {
 
     const insertCampingViewLog = async campingIdx => {
       if (campingIdx) {
-        const d = await apiClient("/camping/insertSearchLog", { campingIdx: campingIdx });
-        // console.log(d);
+        try {
+          const d = await apiClient("/camping/insertSearchLog", { campingIdx: campingIdx });
+          console.log("캠핑장 조회 로그 저장 성공:", campingIdx);
+        } catch (error) {
+          // 로그 저장 실패는 UX에 영향을 주지 않도록 조용히 처리
+          console.warn("캠핑장 조회 로그 저장 실패 (무시됨):", error.message);
+        }
       }
     };
 
@@ -111,11 +117,6 @@ export default {
 </script>
 <template>
   <section class="detail-camping" v-if="campingInfo">
-    <!--todo    지도-->
-
-    <!-- <div id="map" style="width: 500px; height: 400px"></div> -->
-    <!-- <div id="map" style="width: 55%; height: 350px; margin: 0 auto; z-index: 0"></div> -->
-
     <div class="go-camping">
       <img :src="campingInfo.thumbnailUrl ? campingInfo.thumbnailUrl : '/assets/image/infologo.png'" alt="main" />
       <div class="name">{{ campingInfo.campingName }}</div>
@@ -156,13 +157,17 @@ export default {
           />
         </div>
       </div>
+
+      <!-- 지도 섹션 - go-camping 박스 안에 배치 -->
+      <h1 class="det-title">{{ campingInfo.campingName }} 위치</h1>
+      <div class="map-container">
+        <kakaoMap
+          v-if="campingInfo.latitude && campingInfo.longitude"
+          :latitude="campingInfo.latitude"
+          :longitude="campingInfo.longitude"
+        />
+      </div>
     </div>
-    <h1 class="det-title">{{ campingInfo.campingName }} 위치</h1>
-    <kakaoMap
-      v-if="campingInfo.latitude && campingInfo.longitude"
-      :latitude="campingInfo.latitude"
-      :longitude="campingInfo.longitude"
-    />
   </section>
 </template>
 
@@ -254,16 +259,19 @@ export default {
 }
 
 .det-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 30px 0 20px 0;
   color: #333;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
 }
 
-#map {
+.map-container {
   width: 100%;
   height: 400px;
   border-radius: 8px;
-  margin-bottom: 30px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 </style>

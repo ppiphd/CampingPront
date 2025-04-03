@@ -69,6 +69,41 @@ router.post("/getCampingList", (req, res) => {
   });
 });
 
+// 캠핑장 조회 로그 저장
+router.post("/insertSearchLog", (req, res) => {
+  try {
+    const { campingIdx } = req.body;
+
+    if (!campingIdx) {
+      return res.status(400).json({
+        status: 400,
+        message: "캠핑장 ID가 필요합니다",
+      });
+    }
+
+    console.log(`캠핑장 조회 로그 기록: ${campingIdx}`);
+
+    // 실제 애플리케이션에서는 여기에 데이터베이스 저장 로직이 들어갑니다.
+    // 현재는 간단히 로그만 출력하고 성공 응답을 반환합니다.
+
+    res.json({
+      status: 200,
+      message: "캠핑장 조회 기록이 성공적으로 저장되었습니다",
+      data: {
+        campingIdx,
+        timestamp: new Date().toISOString(),
+      },
+    });
+  } catch (error) {
+    console.error("캠핑장 조회 로그 저장 에러:", error);
+    res.status(500).json({
+      status: 500,
+      message: "서버 오류가 발생했습니다",
+      error: error.message,
+    });
+  }
+});
+
 // 캠핑장 상세 조회
 router.get("/:id", (req, res) => {
   try {
