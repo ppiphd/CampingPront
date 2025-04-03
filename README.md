@@ -1,7 +1,7 @@
 # 🏕️ Camp Bears - 종합 캠핑 플랫폼
 
 <p align="center">
-  <img src="/assets/image/logo.png" alt="Camp Bears Logo" width="200" />
+  <img src="/Users/son/Documents/CampingPront/public/assets/image/logo.png" alt="Camp Bears Logo" width="200" />
 </p>
 
 <p align="center">
