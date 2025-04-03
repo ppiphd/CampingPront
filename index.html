@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Noto+Sans+KR:wght@400;500;700&display=swap"
-          rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bears</title>
-    <!--naver-->
-    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
-            charset="utf-8"></script>
-    <!--  <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"-->
-    <!--          charset="utf-8"></script>-->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <!--    kakao-->
-    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.min.js"
-            integrity="sha384-PFHeU/4gvSH8kpvhrigAPfZGBDPs372JceJq3jAXce11bVA6rMvGWzvP4fMQuBGL"
-            crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Naver Login -->
+    <script
+      type="text/javascript"
+      src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
+      charset="utf-8"
+    ></script>
+    <!--  <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>-->
+
+    <!-- Kakao Maps & Login (통합) -->
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=60a72c0b2f9391306a46c5bb287aa87c&libraries=services"
+    ></script>
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script> Kakao.init("37b652b280e20ff8c7240ecd75bfdbb5"); //js key</script>
-    <script type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=37b652b280e20ff8c7240ecd75bfdbb5&libraries=services"></script>
-
-</head>
-<body>
-<div id="app"></div>
-<script src="https://kit.fontawesome.com/97e83b8ce2.js" crossorigin="anonymous"></script>
-<script type="module" src="/src/main.js"></script>
-
-
-</body>
+    <script>
+      Kakao.init("60a72c0b2f9391306a46c5bb287aa87c"); //js key
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://kit.fontawesome.com/97e83b8ce2.js" crossorigin="anonymous"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
