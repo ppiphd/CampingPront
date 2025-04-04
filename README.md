@@ -134,3 +134,25 @@ CampingPront/
 ---
 
 <p align="center">Made with ❤️ by Camp Bears Team</p>
+
+## 환경 변수 설정
+
+프로젝트를 실행하기 위해서는 다음과 같은 환경 변수가 필요합니다:
+
+1. `.env` 파일을 프로젝트 루트 디렉토리에 생성합니다.
+2. `.env.example` 파일을 참고하여 필요한 환경 변수를 설정합니다.
+
+```
+# 서버 설정
+PORT=4001
+
+# GoCamping API 설정
+GOCAMPING_API_KEY=your_gocamping_api_key_here
+
+# 카카오 API 설정
+KAKAO_MAP_API_KEY=your_kakao_map_api_key_here
+```
+
+## 주의사항
+
+- API 키는 `.env` 파일에 안전하게 보관하고, 절대 Git에 커밋하지 마세요.

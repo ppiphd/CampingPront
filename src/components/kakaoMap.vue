@@ -1,202 +1,138 @@
 <script>
-import { ref, onMounted, watch, nextTick } from "vue";
-import { useRoute } from "vue-router";
+import { ref, onMounted, defineProps, defineEmits } from "vue";
 
 export default {
-  name: "kakaoMap",
+  name: "KakaoMap",
   props: {
     latitude: {
       type: String,
-      default: "",
+      required: true,
     },
     longitude: {
       type: String,
-      default: "",
+      required: true,
+    },
+    location: {
+      type: String,
+      default: "캠핑장",
     },
   },
   setup(props) {
-    const map = ref(null);
-    const markers = ref([]);
     const mapLoaded = ref(false);
-    const loadingError = ref(null);
-    const loadingMessage = ref("카카오맵을 불러오는 중입니다...");
-    const route = useRoute();
+    const map = ref(null);
+    const marker = ref(null);
 
-    // 지도 초기화 함수
-    const initMap = () => {
-      const mapElement = document.getElementById("map");
-      if (!mapElement) {
-        console.log("지도를 표시할 요소가 없습니다");
-        loadingError.value = "지도를 표시할 요소가 없습니다";
-        return;
-      }
-
-      try {
-        if (!window.kakao || !window.kakao.maps) {
-          console.error("카카오맵 API가 로드되지 않았습니다");
-          loadingError.value = "카카오맵을 불러오는데 실패했습니다";
+    // Kakao Maps API 로드
+    const loadKakaoMapScript = () => {
+      return new Promise((resolve, reject) => {
+        // 이미 로드된 경우 바로 resolve
+        if (window.kakao && window.kakao.maps) {
+          console.log("Kakao Maps API already loaded");
+          mapLoaded.value = true;
+          resolve();
           return;
         }
 
-        console.log("지도 초기화 시작", { latitude: props.latitude, longitude: props.longitude });
+        // script 요소 생성 및 src 설정
+        const script = document.createElement("script");
+        const apiKey = import.meta.env.VITE_KAKAO_MAP_API_KEY;
+        console.log("Kakao Map API Key (first few chars):", apiKey ? apiKey.substring(0, 5) + "..." : "undefined");
+        script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${apiKey}&autoload=false`;
+        script.async = true;
 
-        // 마커 배열 초기화
-        markers.value = [];
-
-        // 지도 옵션 설정
-        const options = {
-          center: new kakao.maps.LatLng(37.566826, 126.570667), // 기본 중심좌표
-          level: 3, // 지도의 확대 레벨
+        // 스크립트 로드 성공 시
+        script.onload = () => {
+          // Kakao Maps SDK 초기화
+          window.kakao.maps.load(() => {
+            console.log("Kakao Maps API loaded successfully");
+            mapLoaded.value = true;
+            resolve();
+          });
         };
 
-        // 지도 생성
-        map.value = new kakao.maps.Map(mapElement, options);
+        // 스크립트 로드 실패 시
+        script.onerror = error => {
+          console.error("Failed to load Kakao Maps API:", error);
+          reject(new Error("Failed to load Kakao Maps API"));
+        };
 
-        // 지도 컨트롤 추가
-        const zoomControl = new kakao.maps.ZoomControl();
-        map.value.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+        // body에 스크립트 추가
+        document.body.appendChild(script);
+      });
+    };
 
-        // 지도 타입 컨트롤러 추가
-        const mapTypeControl = new kakao.maps.MapTypeControl();
-        map.value.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-
-        // 위도와 경도가 전달된 경우 해당 위치로 지도 이동
-        if (props.latitude && props.longitude) {
-          const lat = parseFloat(props.latitude);
-          const lng = parseFloat(props.longitude);
-
-          console.log("캠핑장 위치 표시:", lat, lng);
-
-          if (!isNaN(lat) && !isNaN(lng)) {
-            // 캠핑장 위치 생성
-            const campingPosition = new kakao.maps.LatLng(lat, lng);
-
-            // 지도 중심 이동
-            map.value.setCenter(campingPosition);
-
-            // 마커 이미지 설정
-            const imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
-            const imageSize = new kakao.maps.Size(24, 35);
-            const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-
-            // 마커 생성
-            const marker = new kakao.maps.Marker({
-              position: campingPosition,
-              map: map.value,
-              image: markerImage,
-            });
-
-            markers.value.push(marker);
-
-            // 인포윈도우 생성
-            const infowindow = new kakao.maps.InfoWindow({
-              content: `<div style="padding:5px;font-size:12px;font-weight:bold;">캠핑장 위치</div>`,
-            });
-
-            infowindow.open(map.value, marker);
-
-            // 마커 클릭 이벤트 리스너 등록
-            kakao.maps.event.addListener(marker, "click", function () {
-              infowindow.open(map.value, marker);
-            });
-          }
+    // 지도 초기화
+    const initMap = async () => {
+      try {
+        if (!mapLoaded.value) {
+          await loadKakaoMapScript();
         }
 
-        mapLoaded.value = true;
-        loadingMessage.value = "";
+        const latitude = parseFloat(props.latitude);
+        const longitude = parseFloat(props.longitude);
+
+        if (isNaN(latitude) || isNaN(longitude)) {
+          console.error("Invalid coordinates:", props.latitude, props.longitude);
+          return;
+        }
+
+        console.log("Initializing map with coordinates:", latitude, longitude);
+
+        const container = document.getElementById("kakao-map");
+        const options = {
+          center: new window.kakao.maps.LatLng(latitude, longitude),
+          level: 3,
+        };
+
+        map.value = new window.kakao.maps.Map(container, options);
+
+        // 마커 생성
+        marker.value = new window.kakao.maps.Marker({
+          position: new window.kakao.maps.LatLng(latitude, longitude),
+          map: map.value,
+        });
+
+        // 인포윈도우 생성
+        const infowindow = new window.kakao.maps.InfoWindow({
+          content: `<div style="padding:5px;font-size:12px;">${props.location}</div>`,
+        });
+
+        // 마커에 인포윈도우 표시
+        infowindow.open(map.value, marker.value);
+
+        // 지도 컨트롤 추가
+        const zoomControl = new window.kakao.maps.ZoomControl();
+        map.value.addControl(zoomControl, window.kakao.maps.ControlPosition.RIGHT);
+
+        console.log("Map initialized successfully");
       } catch (error) {
-        console.error("카카오맵 초기화 중 오류 발생:", error);
-        loadingError.value = "지도 초기화 중 오류가 발생했습니다";
+        console.error("Error initializing map:", error);
       }
     };
 
-    // 위치 속성이 변경될 때 지도 다시 초기화
-    watch(
-      () => [props.latitude, props.longitude],
-      () => {
-        if (props.latitude && props.longitude) {
-          nextTick(() => {
-            initMap();
-          });
-        }
-      },
-    );
-
-    onMounted(() => {
-      // 카카오 API가 이미 로드되어 있는지 확인하고 초기화
-      if (window.kakao && window.kakao.maps) {
-        // 이미 로드된 상태이면 바로 초기화
-        initMap();
-      } else {
-        // 로드 대기 (index.html에서 로드 중인 경우)
-        loadingMessage.value = "카카오맵 API 로드 대기 중...";
-        let checkCount = 0;
-        const checkInterval = setInterval(() => {
-          checkCount++;
-          if (window.kakao && window.kakao.maps) {
-            clearInterval(checkInterval);
-            initMap();
-          } else if (checkCount >= 20) {
-            // 10초 후에도 로드되지 않으면 에러 표시
-            clearInterval(checkInterval);
-            loadingError.value = "카카오맵을 불러오는데 실패했습니다";
-            console.error("카카오맵 API 로드 타임아웃");
-          }
-        }, 500);
-      }
+    onMounted(async () => {
+      console.log("Component mounted, initializing map...");
+      await initMap();
     });
 
     return {
-      loadingError,
-      loadingMessage,
-      mapLoaded,
+      map,
+      marker,
     };
   },
 };
 </script>
+
 <template>
-  <div class="map-box">
-    <div id="map" style="width: 100%; height: 400px; border-radius: 15px; position: relative"></div>
-    <div v-if="loadingError" class="map-error">
-      {{ loadingError }}
-    </div>
-    <div v-else-if="!loadingError && !mapLoaded" class="map-loading">
-      {{ loadingMessage }}
-    </div>
+  <div>
+    <div id="kakao-map" style="width: 100%; height: 400px"></div>
   </div>
 </template>
 
 <style scoped>
-.map-box {
-  width: 100%;
-  height: 400px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.map-error {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px 15px;
-  border-radius: 5px;
-  color: #e74c3c;
-  font-weight: bold;
-  text-align: center;
-}
-
-.map-loading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px 15px;
-  border-radius: 5px;
-  color: #3498db;
-  font-weight: bold;
-  text-align: center;
+#kakao-map {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
 }
 </style>

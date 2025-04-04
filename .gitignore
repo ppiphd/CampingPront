@@ -24,3 +24,13 @@ dist-ssr
 *.sw?
 /src/assets/css/*.css
 /src/assets/css/*.css.map
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Server-specific
+server/.env
+server/.env.*
+!server/.env.example

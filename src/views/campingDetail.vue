@@ -5,14 +5,13 @@ import store, { STORE_TYPE } from "../store/index.js";
 import router from "../router/index.js";
 import commonUtil from "../utils/common-util.js";
 import { apiClient } from "../utils/axios.js";
-import kakaoMap from "../components/kakaoMap.vue";
 import { useRoute, useRouter } from "vue-router";
 import goTo from "vuetify/lib/services/goto";
 import KakaoMap from "../components/kakaoMap.vue";
 
 export default {
   name: "campingDetail",
-  components: { kakaoMap },
+  components: { KakaoMap },
   setup() {
     const route = useRoute();
     const router = useRouter();
@@ -152,10 +151,11 @@ export default {
       <!-- 지도 섹션 - go-camping 박스 안에 배치 -->
       <h1 class="det-title">{{ campingInfo.campingName }} 위치</h1>
       <div class="map-container">
-        <kakaoMap
+        <KakaoMap
           v-if="campingInfo.latitude && campingInfo.longitude"
           :latitude="campingInfo.latitude"
           :longitude="campingInfo.longitude"
+          :location="campingInfo.campingName"
         />
       </div>
     </div>
