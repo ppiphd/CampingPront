@@ -41,7 +41,7 @@ app.use((err, req, res, next) => {
 });
 
 // 서버 시작
-const PORT = 4001;
+const PORT = process.env.PORT || 4001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

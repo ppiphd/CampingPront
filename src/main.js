@@ -13,8 +13,9 @@ function loadKakaoMapScript() {
     const script = document.createElement("script");
     script.type = "text/javascript";
     script.async = true;
-    script.src =
-      "https://dapi.kakao.com/v2/maps/sdk.js?appkey=8cd7ea967a72d603b3fd12c735e76a49&libraries=services&autoload=false";
+    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${
+      import.meta.env.VITE_KAKAO_MAP_API_KEY
+    }&libraries=services&autoload=false`;
 
     script.onload = () => {
       console.log("카카오맵 스크립트 로드 완료 (main.js)");

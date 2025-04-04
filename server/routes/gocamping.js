@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const axios = require("axios");
 
-// GoCamping API 키 (URL 인코딩된 형태로 제공)
-const API_KEY = "IEdTGqhPUIxJy5mLBtkjPw6g%2BaTd90KXgnnc03HRNuD2NUPhtSQ307ZhzYx3n51j%2FpjYn5Hteigqp1cro1Rg6w%3D%3D";
+// GoCamping API 키 (환경변수에서 가져옴)
+const API_KEY = process.env.GOCAMPING_API_KEY;
 const BASE_URL = "http://apis.data.go.kr/B551011/GoCamping";
 
 // 로그에 API 키 확인 (마스킹하여 표시)
