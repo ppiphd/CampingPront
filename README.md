@@ -150,6 +150,20 @@ CampingPront/
   </tr>
 </table>
 
+<table align="center">
+  <tr>
+    <!-- 캠핑장 정보 -->
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/89b24eac-c1e8-410b-944e-b33ebf623a92" alt="캠핑장정보" height="250px"/><br>
+      🏕️ 캠핑장 정보
+    </td>
+    <!-- 상세페이지 -->
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/91a6060a-a8e9-4116-be91-858ddfd94139" alt="캠핑장 상세페이지" height="250px"/><br>
+      📄 캠핑장 상세페이지
+    </td>
+  </tr>
+</table>
 
 
 
