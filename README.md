@@ -123,16 +123,32 @@ CampingPront/
 
 ## 📷 스크린샷
 
+<!-- 1. Bears 로고 -->
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/cf816d89-7d3c-43b7-b8fe-aa1e615fd1d2" alt="Bears" height="250px"/>
-  <img src="https://github.com/user-attachments/assets/3a317e0a-100b-40ab-9fd5-1567a1fc2b73" alt="메인페이지" height="250px"/>
-  <img src="https://github.com/user-attachments/assets/e9515877-4d63-4bdf-8910-8b9eeb5fb9dc" alt="로그인" height="250px"/>
+  <img src="https://github.com/user-attachments/assets/92263786-3557-49fd-812a-27bb2b8a1b5c" alt="Bears" height="150px"/><br>
+  🐻 Bears
 </p>
+
+<!-- 2. 메인페이지 -->
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/bdf0cdac-f0bf-41c7-a041-3368c1157c43" alt="회원가입" height="250px"/>
-  <img src="https://github.com/user-attachments/assets/4ed2af08-3e2d-4d27-a2b3-12eab0089dfa" alt="캠핑장정보" height="250px"/>
-  <img src="https://github.com/user-attachments/assets/bf210303-3ab0-459b-9296-c53efeb6c11d" alt="캠핑장정보 상세페이지" height="250px"/>
+  <img src="https://github.com/user-attachments/assets/4e0b5ec8-e5de-459f-a83e-18d0be4279ac" alt="메인페이지" height="300px"/><br>
+  🏠 메인페이지
 </p>
+
+<table align="center">
+  <tr>
+    <!-- 로그인 -->
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/03625d96-1cda-477d-98ec-274e184644c9" alt="로그인" height="250px"/><br>
+      🔑 로그인
+    </td>
+    <!-- 회원가입 -->
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/71322c3e-5b17-46e6-8ad9-ba42c504a3fa" alt="회원가입" height="250px"/><br>
+      📝 회원가입
+    </td>
+  </tr>
+</table>
 
 
 
