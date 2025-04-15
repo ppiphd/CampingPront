@@ -40,25 +40,29 @@
 ## 🛠️ 기술 스택
 
 ### 프론트엔드
-
-- **Vue.js**: 메인 프론트엔드 프레임워크
-- **Vite**: 빠른 빌드 및 개발 서버 도구
-- **Vue Router**: 페이지 라우팅 관리
-- **Vuex**: 상태 관리 라이브러리
-- **Axios**: HTTP 클라이언트, API 요청 처리
-- **SCSS/CSS**: 스타일링
+<p>
+  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Vue.js"/>
+  <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+  <img src="https://img.shields.io/badge/Vue_Router-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue Router"/>
+  <img src="https://img.shields.io/badge/Vuex-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vuex"/>
+  <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white" alt="Axios"/>
+  <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="SCSS/CSS"/>
+</p>
 
 ### 백엔드
-
-- **Node.js**: 서버 런타임 환경
-- **Express**: 백엔드 웹 프레임워크
-- **Nodemon**: 개발 시 자동 서버 재시작 도구
-- **Concurrently**: 프론트엔드와 백엔드 동시 실행 도구
+<p>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
+  <img src="https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white" alt="Nodemon"/>
+  <img src="https://img.shields.io/badge/Concurrently-blue?style=for-the-badge" alt="Concurrently"/>
+</p>
 
 ## 🔌 외부 API
+<p>
+  <img src="https://img.shields.io/badge/GoCamping_API-F15F37?style=for-the-badge" alt="GoCamping API"/>
+  <img src="https://img.shields.io/badge/Kakao_Maps-FFCD00?style=for-the-badge&logo=kakao&logoColor=black" alt="Kakao Maps API"/>
+</p>
 
-- **GoCamping API**: 한국관광공사 캠핑장 정보 API
-- **Kakao Maps API**: 지도 표시 및 위치 정보
 
 ## 🚀 시작하기
 
