@@ -40,6 +40,7 @@
 ## 🛠 기술 스택
 
 ### 프론트엔드
+
 <p>
   <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Vue.js"/>
   <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
@@ -50,6 +51,7 @@
 </p>
 
 ### 백엔드
+
 <p>
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
   <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
@@ -58,11 +60,11 @@
 </p>
 
 ## 🔌 외부 API
+
 <p>
   <img src="https://img.shields.io/badge/GoCamping_API-F15F37?style=for-the-badge" alt="GoCamping API"/>
   <img src="https://img.shields.io/badge/Kakao_Maps-FFCD00?style=for-the-badge&logo=kakao&logoColor=black" alt="Kakao Maps API"/>
 </p>
-
 
 ## 🚀 시작하기
 
@@ -169,8 +171,6 @@ CampingPront/
   </tr>
 </table>
 
-
-
 ## 📄 라이센스
 
 이 프로젝트는 MIT 라이센스에 따라 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
@@ -199,4 +199,4 @@ KAKAO_MAP_API_KEY=your_kakao_map_api_key_here
 
 ## 주의사항
 
-- API 키는 `.env` 파일에 안전하게 보관하고, 절대 Git에 커밋하지 마세요.
+- API 키는 `.env` 파일에 안전하게 보관하고, 절대 Git에 커밋ㄴㄴ.
