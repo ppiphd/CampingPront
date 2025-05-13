@@ -199,4 +199,4 @@ KAKAO_MAP_API_KEY=your_kakao_map_api_key_here
 
 ## 주의사항
 
-- API 키는 `.env` 파일에 안전하게 보관하고, 절대 Git에 커밋ㄴㄴ.
+- API 키는 `.env` 파일에 안전하게 보관하고, 절대 Git에 커밋금지.
