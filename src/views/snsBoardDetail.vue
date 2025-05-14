@@ -93,16 +93,33 @@ export default {
     };
     //좋아요
     const doLike = async () => {
-      if (heartState.value.STATE === "DISLIKE") {
-        heartData.value.likeType = "LIKE";
-        heartState.value.STATE = "LIKE";
-        heartCount.value++;
-      } else {
-        heartData.value.likeType = "DISLIKE";
-        heartState.value.STATE = "DISLIKE";
-        heartCount.value -= 1;
+      try {
+        if (heartState.value.STATE === "DISLIKE") {
+          heartData.value.likeType = "LIKE";
+          heartState.value.STATE = "LIKE";
+          heartCount.value++;
+        } else {
+          heartData.value.likeType = "DISLIKE";
+          heartState.value.STATE = "DISLIKE";
+          heartCount.value -= 1;
+        }
+
+        const data = await apiClient("/common/doLike", heartData.value);
+      } catch (error) {
+        console.error("좋아요 처리 중 오류 발생:", error);
+
+        // 롤백 (옵션) - 실패한 경우 상태 복구
+        if (heartData.value.likeType === "LIKE") {
+          heartState.value.STATE = "DISLIKE";
+          heartCount.value--;
+        } else {
+          heartState.value.STATE = "LIKE";
+          heartCount.value++;
+        }
+
+        // 사용자에게 알림 (선택)
+        alert("좋아요 처리 중 오류가 발생했습니다. 다시 시도해주세요.");
       }
-      const data = await apiClient("/common/doLike", heartData.value);
     };
     //상세 게시물 조회 api
     const getBoardDetail = async () => {
